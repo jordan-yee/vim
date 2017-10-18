@@ -11,6 +11,7 @@ git submodule update --init
 ```
 
 # Adding a Module
+From ~/.vim/bundle directory:
 ```
 git submodule add <module-url>
 ```
