@@ -90,11 +90,18 @@ if has('syntax') && has('eval')
   packadd matchit
 endif
 
-"Open command prompt by running :Cp
-command Cp :!start cmd /k cd %:p:h<CR>
+" Open command prompt by running :Cp
+if !exists(":Cp")
+  command Cp :!start cmd /k cd %:p:h<CR>
+endif
 
-"Open windows explorer by running :We
-command We :!start Explorer /select,%:p<CR>
+" Open windows explorer by running :We
+if !exists(":Cp")
+  command We :!start Explorer /select,%:p<CR>
+endif
+
+" Switch to most recently open buffer with ALT-`
+nmap <M-`> :b#<cr>
 
 " Rainbow parenthesis
 au VimEnter * RainbowParenthesesToggle
