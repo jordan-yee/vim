@@ -25,3 +25,6 @@
 [submodule "bundle/molokai"]
 	path = bundle/molokai
 	url = https://github.com/tomasr/molokai.git
+[submodule "bundle/vim-table-mode"]
+	path = bundle/vim-table-mode
+	url = https://github.com/dhruvasagar/vim-table-mode.git

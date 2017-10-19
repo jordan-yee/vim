@@ -112,3 +112,6 @@ let g:sexp_mappings = {
 " CtrlP
 let g:ctrlp_working_path_mode = 'rc'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard']
+
+" vim-table-mode
+let g:table_mode_corner='|'
