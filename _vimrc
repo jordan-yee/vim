@@ -13,7 +13,7 @@ if has('gui_running')
   au GUIEnter * simalt ~x
 
   " Miscelaneous settings
-  colorscheme kalisi
+  colorscheme molokai
   set scrolloff=1         " Show a few lines of context around the cursor
 else
   colorscheme darkblue
@@ -41,7 +41,7 @@ set formatoptions+=j    " Delete comment character when joining commented lines
 " Autocompletion
 set omnifunc=syntaxcomplete#Complete
 set completeopt=menuone,longest,preview
-highlight Pmenu guibg=#ffaf00 guifg=#404042 gui=bold
+"highlight Pmenu guibg=#ffaf00 guifg=#404042 gui=bold
 " Enter key selects highlighted completion item
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " Highlight first match with <C-n>
@@ -106,3 +106,7 @@ let g:sexp_mappings = {
       \ 'sexp_capture_prev_element':      '<LocalLeader>S',
       \ 'sexp_capture_next_element':      '<LocalLeader>s',
       \ }
+
+" CtrlP
+let g:ctrlp_working_path_mode = 'rc'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard']
