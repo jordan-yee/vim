@@ -9,11 +9,13 @@ Helptags
 
 " GUI
 if has('gui_running')
-  " Start fullscreen
-  au GUIEnter * simalt ~x
+  au GUIEnter * simalt ~x " Start fullscreen
+  set guioptions -=m      " Remove menubar
+  set guioptions -=T      " Remove toolbar
 
   " Miscelaneous settings
   colorscheme molokai
+  set guifont=Source_Code_Pro:h11:cANSI:qDRAFT
   set scrolloff=1         " Show a few lines of context around the cursor
 else
   colorscheme darkblue
