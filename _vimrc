@@ -39,6 +39,7 @@ set incsearch           " Highlight search results while typing search term
 set autoread            " Automatically files modified outside vim
 set laststatus=2        " The last window will always have a status line
 set formatoptions+=j    " Delete comment character when joining commented lines
+set nowrap
 
 " Autocompletion
 set omnifunc=syntaxcomplete#Complete
@@ -55,6 +56,9 @@ let g:SuperTabLongestHighlight=1
 
 " Quickly time out on keycodes, but never time out on mappings
 set notimeout ttimeout ttimeoutlen=200
+
+" Binding for quicker return to normal mode
+imap jk <Esc>
 
 " Indentation settings
 set softtabstop=2
