@@ -100,7 +100,7 @@ if !exists(":Cp")
 endif
 
 " Open windows explorer by running :We
-if !exists(":Cp")
+if !exists(":We")
   command We :!start Explorer /select,%:p<CR>
 endif
 
