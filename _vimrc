@@ -29,6 +29,7 @@ endif
 " Miscelaneous Defaults
 syntax on
 filetype plugin indent on
+set number
 set relativenumber
 set backspace=indent,eol,start
 set history=200		" Keep 200 lines of command line history
