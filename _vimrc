@@ -32,15 +32,34 @@ filetype plugin indent on
 set number
 set relativenumber
 set backspace=indent,eol,start
-set history=200		" Keep 200 lines of command line history
-set ruler		" Show the cursor position all the time
-set showcmd		" Display incomplete commands
-set wildmenu		" Display completion matches in a status line
+set history=200         " Keep 200 lines of command line history
+set ruler               " Show the cursor position all the time
+set showcmd             " Display incomplete commands
+set wildmenu            " Display completion matches in a status line
 set incsearch           " Highlight search results while typing search term
 set autoread            " Automatically files modified outside vim
 set laststatus=2        " The last window will always have a status line
 set formatoptions+=j    " Delete comment character when joining commented lines
 set nowrap
+
+" Show trailing whitespace
+highlight ExtraWhitespace ctermbg=DarkGray guibg=#333333 guifg=#666666
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+set list listchars=tab:>-,trail:·
+
+" Remove trailing whitespace on write
+function! StripTrailingWhitespace()
+  normal mZ
+  let l:chars = col("$")
+  %s/\s\+$//e
+  if (line("'Z") != line(".")) || (l:chars != col("$"))
+    echo "Trailing whitespace stripped\n"
+  endif
+  normal `Z
+endfunction
+autocmd BufWritePre * call StripTrailingWhitespace()
 
 " Autocompletion
 set omnifunc=syntaxcomplete#Complete
@@ -82,7 +101,7 @@ autocmd BufReadPost *
 " Revert with: ":delcommand DiffOrig".
 if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
+                  \ | wincmd p | diffthis
 endif
 
 " Use <C-L> to clear the highlighting of :set hlsearch.
