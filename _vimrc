@@ -163,3 +163,6 @@ set statusline+=%=\ %l/%L
 " Go to quickfix prev/next
 nnoremap <C-up> :cN<cr>
 nnoremap <C-down> :cn<cr>
+
+" Set indent folding by default
+set foldmethod=indent
