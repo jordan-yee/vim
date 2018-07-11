@@ -159,3 +159,7 @@ set statusline+=\ %f\ %h%m%r
 set statusline+=\ \ %{fugitive#statusline()}
 set statusline+=%=%c
 set statusline+=%=\ %l/%L
+
+" Go to quickfix prev/next
+nnoremap <C-up> :cN<cr>
+nnoremap <C-down> :cn<cr>
