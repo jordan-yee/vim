@@ -166,3 +166,6 @@ nnoremap <C-down> :cn<cr>
 
 " Set indent folding by default
 set foldmethod=indent
+
+" Shortcut to connect to Figwheel REPL when editing ClojureScript files
+nnoremap <C-S-P> :Piggieback (figwheel.main.api/repl-env "dev")<cr>
