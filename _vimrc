@@ -167,5 +167,7 @@ nnoremap <C-down> :cn<cr>
 " Set indent folding by default
 set foldmethod=indent
 
-" Shortcut to connect to Figwheel REPL when editing ClojureScript files
-nnoremap <C-S-P> :Piggieback (figwheel.main.api/repl-env "dev")<cr>
+" Connect to Figwheel REPL when editing .cljs files by running :Pb
+if !exists(":Pb")
+  command Pb :Piggieback (figwheel.main.api/repl-env "dev")<CR>
+endif
