@@ -171,3 +171,8 @@ set foldmethod=indent
 if !exists(":Pb")
   command Pb :Piggieback (figwheel.main.api/repl-env "dev")<CR>
 endif
+
+" Configure ALE plugin
+let g:ale_linters = {'clojure': ['clj-kondo']}
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
