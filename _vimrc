@@ -160,6 +160,10 @@ set statusline+=\ \ %{fugitive#statusline()}
 set statusline+=%=%c
 set statusline+=%=\ %l/%L
 
+" Airline
+let g:airline_theme='wombat'
+let g:airline#extensions#ale#enabled = 1
+
 " Go to quickfix prev/next
 nnoremap <C-up> :cN<cr>
 nnoremap <C-down> :cn<cr>
