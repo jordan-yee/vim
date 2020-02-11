@@ -34,3 +34,6 @@
 [submodule "bundle/vim-easydir"]
 	path = bundle/vim-easydir
 	url = https://github.com/duggiefresh/vim-easydir.git
+[submodule "bundle/ale"]
+	path = bundle/ale
+	url = https://github.com/dense-analysis/ale.git
