@@ -28,6 +28,9 @@ git submodule foreach git pull origin master
 ```
 
 # Notes
-When you follow this method, generating helptags dirties the submodule’s git repository tree.  
+When you follow this method, generating helptags dirties the submodule’s git repository tree.
 
-Nils Haldenwang has written a [blog post](http://www.nils-haldenwang.de/frameworks-and-tools/git/how-to-ignore-changes-in-git-submodules) describing a simple fix, which just involves adding the line ignore = dirty to the .gitmodules file for each submodule that reports a dirty tree when you run git status.
+Nils Haldenwang has written a
+[blog post](http://www.nils-haldenwang.de/frameworks-and-tools/git/how-to-ignore-changes-in-git-submodules)
+ describing a simple fix, which just involves adding the line ignore = dirty to the
+ .gitmodules file for each submodule that reports a dirty tree when you run git status.
