@@ -41,6 +41,7 @@ set autoread            " Automatically files modified outside vim
 set laststatus=2        " The last window will always have a status line
 set formatoptions+=j    " Delete comment character when joining commented lines
 set nowrap
+set colorcolum=96       " This allows 2 windows to be open side-by-side on a 1080p screen
 
 " Show trailing whitespace
 highlight ExtraWhitespace ctermbg=DarkGray guibg=#333333 guifg=#666666
