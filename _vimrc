@@ -163,7 +163,7 @@ nnoremap <C-up> :cN<cr>
 nnoremap <C-down> :cn<cr>
 
 " Set indent folding by default
-set foldmethod=indent
+"set foldmethod=indent
 
 " Connect to Figwheel REPL when editing .cljs files by running :Pb
 if !exists(":Pb")
